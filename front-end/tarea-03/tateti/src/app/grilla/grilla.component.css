@@ -1,0 +1,13 @@
+
+.grilla-contenedor {
+  background: rgb(162, 207, 244);
+  border: thin solid blue;
+  display: grid;
+  /*grid-template-rows: 100px; */
+  grid-template-columns: repeat(3,1fr); 
+  max-width: 50%;
+  margin : auto;
+
+  
+  /*min-height: 10vh;*/
+}
