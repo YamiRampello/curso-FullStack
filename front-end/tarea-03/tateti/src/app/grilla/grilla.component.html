@@ -1,11 +1,19 @@
-<div class="grilla-contenedor">
-  <app-celda> </app-celda>
-  <app-celda> </app-celda>
-  <app-celda> </app-celda>
-  <app-celda> </app-celda>
-  <app-celda> </app-celda>
-  <app-celda> </app-celda>
-  <app-celda> </app-celda>
-  <app-celda> </app-celda>
-  <app-celda> </app-celda>
+<div class="comenzarJuego">
+  <button (click)="comenzarJuego()">Juego nuevo</button>
 </div>
+
+<p class="oculto">Jugador actual: {{ cambiarTurnoJugador }}</p>
+
+<p class="ganar" *ngIf="ganador">
+  Ganó el jugador: {{ ganador }}! <br />
+  Toca el botón para volver a jugar
+</p>
+
+<main class="grilla">
+  <app-celda
+    *ngFor="let marcaCelda of celdas; let i = index"
+    (click)="manejarTurno(i)"
+    [marca]="marcaCelda"
+  >
+  </app-celda>
+</main>

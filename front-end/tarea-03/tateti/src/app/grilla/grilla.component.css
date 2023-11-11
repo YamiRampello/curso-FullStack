@@ -1,13 +1,33 @@
+* {
+  text-align: center;
+}
 
-.grilla-contenedor {
-  background: rgb(162, 207, 244);
-  border: thin solid blue;
+.grilla {
   display: grid;
-  /*grid-template-rows: 100px; */
-  grid-template-columns: repeat(3,1fr); 
-  max-width: 50%;
-  margin : auto;
+  grid-template-columns: repeat(3, 1fr);
+  width: 30rem;
+  height: 30rem;
+  margin: 1rem auto;
+}
 
-  
-  /*min-height: 10vh;*/
+.comenzarJuego {
+  width: 12vw;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.comenzarJuego button {
+  cursor: pointer;
+  height: 3rem;
+  width: 100%;
+  background: rgb(162, 207, 244);
+  color: rgb(90, 89, 89);
+  font-size: 20px;
+}
+
+.ganar {
+  background: rgb(90, 89, 89);
+  color: rgb(162, 207, 244);
+  font-size: 30px;
 }

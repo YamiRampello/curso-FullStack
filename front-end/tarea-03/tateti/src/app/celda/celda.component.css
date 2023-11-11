@@ -1,9 +1,12 @@
 .celda {
-  border: thin solid blue;
-
-  height: 80px;
-  font-size:50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border: thin solid rgb(162, 207, 244);
+  background: white;
+  cursor: pointer;
+  font-weight: 700;
+  height: 10rem;
+  width: 10rem;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 40px;
+  color: rgb(162, 207, 244);
 }
