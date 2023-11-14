@@ -1,0 +1,114 @@
+<h2 style="margin-left: 2%">{{ title }}</h2>
+
+<form [formGroup]="suscriptionForm" (ngSubmit)="submit()">
+  <label for="nombre" class="etiquetas"> Nombre: </label>
+  <input id="nombre" type="text" formControlName="nombre" class="datos" /><br />
+  <div
+    class="obligatorio"
+    [hidden]="nombre.valid || (nombre.untouched && nombre.pristine)"
+  >
+    El nombre es obligatorio
+  </div>
+
+  <label for="apellido" class="etiquetas">Apellido: </label>
+  <input type="text" formControlName="apellido" class="datos" /><br />
+  <div
+    class="obligatorio"
+    [hidden]="apellido.valid || (apellido.untouched && apellido.pristine)"
+  >
+    El apellido es obligatorio
+  </div>
+
+  <label for="email" class="etiquetas">Email: </label>
+  <input type="email" formControlName="email" class="datos" /><br />
+  <div
+    class="obligatorio"
+    [hidden]="email.valid || (email.untouched && email.pristine)"
+  >
+    El email es obligatorio
+  </div>
+
+  <label for="emailConfirm" class="etiquetas">Confirmación de email: </label>
+  <input type="email" formControlName="emailConfirm" class="datos" /><br />
+  <div
+    class="obligatorio"
+    [hidden]="
+      emailConfirm.valid || (emailConfirm.untouched && emailConfirm.pristine)
+    "
+  >
+    La confirmación de email es obligatoria
+  </div>
+
+  <label for="telefono" class="etiquetas">Telefono: </label>
+  <input type="text" formControlName="telefono" class="datos" /><br />
+  <div
+    class="obligatorio"
+    [hidden]="telefono.valid || (telefono.untouched && telefono.pristine)"
+  >
+    El telefono es obligatorio
+  </div>
+
+  <label for="contrasena" class="etiquetas">Contraseña: </label>
+  <input
+    formControlName="contrasena"
+    type="password"
+    id="asda"
+    class="datos"
+  /><br />
+  <div
+    class="obligatorio"
+    [hidden]="contrasena.valid || (contrasena.untouched && contrasena.pristine)"
+  >
+    La contraseña es obligatorio
+  </div>
+  <br />
+  <p class="etiquetas">Acepta recibir notificaciones:</p>
+  <label for="si" class="etiquetas">Si: </label>
+  <input
+    type="radio"
+    id="si"
+    value="si"
+    name="notificaciones"
+    formControlName="notificaciones"
+    class="sino"
+  />
+  <label for="no" class="etiquetas">No</label>
+  <input
+    type="radio"
+    id="no"
+    value="no"
+    name="notificaciones"
+    formControlName="notificaciones"
+    class="sino"
+  /><br />
+  <div
+    class="obligatorio"
+    [hidden]="
+      notificaciones.valid ||
+      (notificaciones.untouched && notificaciones.pristine)
+    "
+  >
+    Debe elegir una opción
+  </div>
+  <br />
+  <label for="terminos" class="etiquetas"
+    >Acepta términos y condiciones:
+  </label>
+  <input type="checkbox" formControlName="terminos" class="sino" /><br /><br />
+  <div
+    class="obligatorio"
+    [hidden]="terminos.valid || (terminos.untouched && terminos.pristine)"
+  >
+    Debe aceptar los términos y condiciones
+  </div>
+
+  <button
+    class="success"
+    color="primary"
+    type="submit"
+    [disabled]="suscriptionForm.invalid"
+  >
+    Enviar
+  </button>
+</form>
+
