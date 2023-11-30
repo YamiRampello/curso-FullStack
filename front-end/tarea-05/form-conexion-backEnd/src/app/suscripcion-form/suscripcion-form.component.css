@@ -1,0 +1,27 @@
+.obligatorio {
+  color: red;
+  margin-left: 2%;
+}
+
+.success {
+  font-size: 20px;
+  margin-left: 2%;
+}
+.success:hover {
+  background-color: #46a049;
+  color: white;
+}
+
+.datos {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 2px 0;
+  box-sizing: border-box;
+  border: 2px solid #d2dfda;
+  background-color: #e8f4ef;
+  margin-left: 2%;
+}
+.etiquetas {
+  font-size: 18px;
+  margin-left: 2%;
+}
