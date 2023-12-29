@@ -1,0 +1,33 @@
+<div class="title">
+  <h1>Ver persona</h1>
+</div>
+<app-spinner *ngIf="loading"> </app-spinner>
+<div *ngIf="persona != null" class="container">
+  <mat-card class="card">
+    <mat-card-title> {{ persona.nombre }} </mat-card-title>
+    <mat-card-content>
+      <p>
+        Nombre:
+        <strong> {{ persona.nombre }} </strong>
+      </p>
+
+      <p>
+        Apellido:
+        <strong> {{ persona.apellido }} </strong>
+      </p>
+
+      <p>
+        Celular:
+        <strong> {{ persona.celular }} </strong>
+      </p>
+
+      <p>
+        Mail:
+        <strong> {{ persona.correoElectronico }} </strong>
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button routerLink="/listPersonas" mat-raised-button>Volver</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
